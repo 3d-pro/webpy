@@ -6,7 +6,6 @@ RUN echo 'Acquire::http::Proxy "http://172.17.0.1:3142";' > /etc/apt/apt.conf.d/
     apt-get update && \
     apt-get install -y python-pip && \
     pip install web.py && \
-    mv /build-files/authorized_keys /root/.ssh/authorized_keys && \
     mv /build-files/start.sh /start.sh && \
     mv /build-files/webpy-logrotate /etc/logrotate.d/webpy && \
     useradd -s /bin/bash -d /home/web -m web && \
